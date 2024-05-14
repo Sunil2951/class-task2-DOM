@@ -17,6 +17,32 @@ input_ele.setAttribute(attrname1,attrval1);
 return input_ele;
 }
 
+function button_create(tag,attrname,attrval,attrname1,attrval1,content){
+var button_ele=document.createElement(tag);
+button_ele.setAttribute(attrname,attrval);
+button_ele.setAttribute(attrname1,attrval1);
+button_ele.innerHTML = content;
+return button_ele;
+}
+
+function foo(){
+    var res = document.getElementById("firstname").value;
+    console.log(res);
+
+    var res = document.getElementById("middlename").value;
+    console.log(res);
+
+    var res = document.getElementById("lastname").value;
+    console.log(res);
+
+    var res = document.getElementById("email").value;
+    console.log(res);
+
+    var res = document.getElementById("location").value;
+    console.log(res);
+
+}
+
 //firstname
 document.body.append(label_create("label","for","firstname","Firstname"));
 document.body.append(break_create());
@@ -47,3 +73,5 @@ document.body.append(break_create());
 document.body.append(input_create("input","type","location","id","location"));
 document.body.append(break_create());
 
+//button
+document.body.append(button_create("button","type","button","onclick","foo()","ClickMe"))
